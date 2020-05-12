@@ -1,0 +1,19 @@
+<div class="container">
+    <button (click)="toggleStatusBarComp()">
+        Click to toggle
+    </button>
+
+    <ag-grid-angular
+            class="ag-theme-alpine"
+            rowSelection="multiple"
+            [rowData]="rowData"
+            [modules]="modules"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [frameworkComponents]="frameworkComponents"
+            [getContextMenuItems]="getContextMenuItems"
+            [statusBar]="statusBar"
+            (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular>
+</div>
